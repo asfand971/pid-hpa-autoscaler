@@ -5,7 +5,7 @@
 # ==========================================
 cluster-up:
 	@echo "Bootstrapping Minikube (4 CPUs, 6GB RAM)..."
-	minikube start --cpus=4 --memory=6g --addons=metrics-server
+	minikube start --driver=docker --cpus=4 --memory=6g --addons=metrics-server
 
 cluster-down:
 	minikube delete

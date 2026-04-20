@@ -1,0 +1,196 @@
+[2026-04-17 01:30:28,603] Mac/INFO/locust.main: Starting Locust 2.43.4
+[2026-04-17 01:30:28,609] Mac/WARNING/locust.main: --run-time, --users or --spawn-rate have no impact on LoadShapes unless the shape class explicitly reads them. See: docs.locust.io/en/stable/custom-load-shape.html#use-common-options
+[2026-04-17 01:30:28,609] Mac/WARNING/locust.main: The following option(s) will be ignored: --users, --spawn-rate, --run-time
+[2026-04-17 01:30:28,610] Mac/INFO/locust.runners: Shape test starting.
+[2026-04-17 01:30:28,610] Mac/INFO/locust.runners: Shape worker starting
+[2026-04-17 01:30:28,610] Mac/INFO/locust.runners: Shape test updating to 100 users at 10.00 spawn rate
+[2026-04-17 01:30:28,610] Mac/INFO/locust.runners: Ramping to 100 users at a rate of 10.00 per second
+[2026-04-17 01:30:37,637] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 100} (100 total users)
+[2026-04-17 01:35:29,428] Mac/INFO/locust.runners: Shape test updating to 105 users at 20.00 spawn rate
+[2026-04-17 01:35:29,429] Mac/INFO/locust.runners: Ramping to 105 users at a rate of 20.00 per second
+[2026-04-17 01:35:29,431] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 105} (105 total users)
+[2026-04-17 01:35:30,437] Mac/INFO/locust.runners: Shape test updating to 112 users at 20.00 spawn rate
+[2026-04-17 01:35:30,437] Mac/INFO/locust.runners: Ramping to 112 users at a rate of 20.00 per second
+[2026-04-17 01:35:30,438] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 112} (112 total users)
+[2026-04-17 01:35:31,439] Mac/INFO/locust.runners: Shape test updating to 118 users at 20.00 spawn rate
+[2026-04-17 01:35:31,439] Mac/INFO/locust.runners: Ramping to 118 users at a rate of 20.00 per second
+[2026-04-17 01:35:31,439] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 118} (118 total users)
+[2026-04-17 01:35:32,451] Mac/INFO/locust.runners: Shape test updating to 125 users at 20.00 spawn rate
+[2026-04-17 01:35:32,451] Mac/INFO/locust.runners: Ramping to 125 users at a rate of 20.00 per second
+[2026-04-17 01:35:32,453] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 125} (125 total users)
+[2026-04-17 01:35:33,466] Mac/INFO/locust.runners: Shape test updating to 132 users at 20.00 spawn rate
+[2026-04-17 01:35:33,467] Mac/INFO/locust.runners: Ramping to 132 users at a rate of 20.00 per second
+[2026-04-17 01:35:33,468] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 132} (132 total users)
+[2026-04-17 01:35:34,477] Mac/INFO/locust.runners: Shape test updating to 139 users at 20.00 spawn rate
+[2026-04-17 01:35:34,477] Mac/INFO/locust.runners: Ramping to 139 users at a rate of 20.00 per second
+[2026-04-17 01:35:34,478] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 139} (139 total users)
+[2026-04-17 01:35:35,488] Mac/INFO/locust.runners: Shape test updating to 145 users at 20.00 spawn rate
+[2026-04-17 01:35:35,488] Mac/INFO/locust.runners: Ramping to 145 users at a rate of 20.00 per second
+[2026-04-17 01:35:35,489] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 145} (145 total users)
+[2026-04-17 01:35:36,493] Mac/INFO/locust.runners: Shape test updating to 152 users at 20.00 spawn rate
+[2026-04-17 01:35:36,493] Mac/INFO/locust.runners: Ramping to 152 users at a rate of 20.00 per second
+[2026-04-17 01:35:36,493] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 152} (152 total users)
+[2026-04-17 01:35:37,504] Mac/INFO/locust.runners: Shape test updating to 159 users at 20.00 spawn rate
+[2026-04-17 01:35:37,504] Mac/INFO/locust.runners: Ramping to 159 users at a rate of 20.00 per second
+[2026-04-17 01:35:37,506] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 159} (159 total users)
+[2026-04-17 01:35:38,516] Mac/INFO/locust.runners: Shape test updating to 166 users at 20.00 spawn rate
+[2026-04-17 01:35:38,516] Mac/INFO/locust.runners: Ramping to 166 users at a rate of 20.00 per second
+[2026-04-17 01:35:38,518] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 166} (166 total users)
+[2026-04-17 01:35:39,525] Mac/INFO/locust.runners: Shape test updating to 172 users at 20.00 spawn rate
+[2026-04-17 01:35:39,526] Mac/INFO/locust.runners: Ramping to 172 users at a rate of 20.00 per second
+[2026-04-17 01:35:39,527] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 172} (172 total users)
+[2026-04-17 01:35:40,535] Mac/INFO/locust.runners: Shape test updating to 179 users at 20.00 spawn rate
+[2026-04-17 01:35:40,535] Mac/INFO/locust.runners: Ramping to 179 users at a rate of 20.00 per second
+[2026-04-17 01:35:40,536] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 179} (179 total users)
+[2026-04-17 01:35:41,544] Mac/INFO/locust.runners: Shape test updating to 186 users at 20.00 spawn rate
+[2026-04-17 01:35:41,544] Mac/INFO/locust.runners: Ramping to 186 users at a rate of 20.00 per second
+[2026-04-17 01:35:41,545] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 186} (186 total users)
+[2026-04-17 01:35:42,557] Mac/INFO/locust.runners: Shape test updating to 192 users at 20.00 spawn rate
+[2026-04-17 01:35:42,558] Mac/INFO/locust.runners: Ramping to 192 users at a rate of 20.00 per second
+[2026-04-17 01:35:42,559] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 192} (192 total users)
+[2026-04-17 01:35:43,568] Mac/INFO/locust.runners: Shape test updating to 199 users at 20.00 spawn rate
+[2026-04-17 01:35:43,568] Mac/INFO/locust.runners: Ramping to 199 users at a rate of 20.00 per second
+[2026-04-17 01:35:43,569] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 199} (199 total users)
+[2026-04-17 01:35:44,576] Mac/INFO/locust.runners: Shape test updating to 206 users at 20.00 spawn rate
+[2026-04-17 01:35:44,576] Mac/INFO/locust.runners: Ramping to 206 users at a rate of 20.00 per second
+[2026-04-17 01:35:44,577] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 206} (206 total users)
+[2026-04-17 01:35:45,587] Mac/INFO/locust.runners: Shape test updating to 213 users at 20.00 spawn rate
+[2026-04-17 01:35:45,588] Mac/INFO/locust.runners: Ramping to 213 users at a rate of 20.00 per second
+[2026-04-17 01:35:45,589] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 213} (213 total users)
+[2026-04-17 01:35:46,601] Mac/INFO/locust.runners: Shape test updating to 219 users at 20.00 spawn rate
+[2026-04-17 01:35:46,601] Mac/INFO/locust.runners: Ramping to 219 users at a rate of 20.00 per second
+[2026-04-17 01:35:46,602] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 219} (219 total users)
+[2026-04-17 01:35:47,608] Mac/INFO/locust.runners: Shape test updating to 226 users at 20.00 spawn rate
+[2026-04-17 01:35:47,609] Mac/INFO/locust.runners: Ramping to 226 users at a rate of 20.00 per second
+[2026-04-17 01:35:47,609] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 226} (226 total users)
+[2026-04-17 01:35:48,621] Mac/INFO/locust.runners: Shape test updating to 233 users at 20.00 spawn rate
+[2026-04-17 01:35:48,622] Mac/INFO/locust.runners: Ramping to 233 users at a rate of 20.00 per second
+[2026-04-17 01:35:48,623] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 233} (233 total users)
+[2026-04-17 01:35:49,633] Mac/INFO/locust.runners: Shape test updating to 240 users at 20.00 spawn rate
+[2026-04-17 01:35:49,633] Mac/INFO/locust.runners: Ramping to 240 users at a rate of 20.00 per second
+[2026-04-17 01:35:49,635] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 240} (240 total users)
+[2026-04-17 01:35:50,643] Mac/INFO/locust.runners: Shape test updating to 246 users at 20.00 spawn rate
+[2026-04-17 01:35:50,643] Mac/INFO/locust.runners: Ramping to 246 users at a rate of 20.00 per second
+[2026-04-17 01:35:50,644] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 246} (246 total users)
+[2026-04-17 01:35:51,654] Mac/INFO/locust.runners: Shape test updating to 253 users at 20.00 spawn rate
+[2026-04-17 01:35:51,655] Mac/INFO/locust.runners: Ramping to 253 users at a rate of 20.00 per second
+[2026-04-17 01:35:51,656] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 253} (253 total users)
+[2026-04-17 01:35:52,663] Mac/INFO/locust.runners: Shape test updating to 260 users at 20.00 spawn rate
+[2026-04-17 01:35:52,663] Mac/INFO/locust.runners: Ramping to 260 users at a rate of 20.00 per second
+[2026-04-17 01:35:52,664] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 260} (260 total users)
+[2026-04-17 01:35:53,674] Mac/INFO/locust.runners: Shape test updating to 267 users at 20.00 spawn rate
+[2026-04-17 01:35:53,675] Mac/INFO/locust.runners: Ramping to 267 users at a rate of 20.00 per second
+[2026-04-17 01:35:53,676] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 267} (267 total users)
+[2026-04-17 01:35:54,681] Mac/INFO/locust.runners: Shape test updating to 273 users at 20.00 spawn rate
+[2026-04-17 01:35:54,682] Mac/INFO/locust.runners: Ramping to 273 users at a rate of 20.00 per second
+[2026-04-17 01:35:54,683] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 273} (273 total users)
+[2026-04-17 01:35:55,693] Mac/INFO/locust.runners: Shape test updating to 280 users at 20.00 spawn rate
+[2026-04-17 01:35:55,694] Mac/INFO/locust.runners: Ramping to 280 users at a rate of 20.00 per second
+[2026-04-17 01:35:55,695] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 280} (280 total users)
+[2026-04-17 01:35:56,708] Mac/INFO/locust.runners: Shape test updating to 287 users at 20.00 spawn rate
+[2026-04-17 01:35:56,708] Mac/INFO/locust.runners: Ramping to 287 users at a rate of 20.00 per second
+[2026-04-17 01:35:56,711] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 287} (287 total users)
+[2026-04-17 01:35:57,721] Mac/INFO/locust.runners: Shape test updating to 294 users at 20.00 spawn rate
+[2026-04-17 01:35:57,721] Mac/INFO/locust.runners: Ramping to 294 users at a rate of 20.00 per second
+[2026-04-17 01:35:57,723] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 294} (294 total users)
+[2026-04-17 01:35:58,734] Mac/INFO/locust.runners: Shape test updating to 300 users at 20.00 spawn rate
+[2026-04-17 01:35:58,734] Mac/INFO/locust.runners: Ramping to 300 users at a rate of 20.00 per second
+[2026-04-17 01:35:58,735] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 300} (300 total users)
+[2026-04-17 01:35:59,741] Mac/INFO/locust.runners: Shape test updating to 307 users at 20.00 spawn rate
+[2026-04-17 01:35:59,742] Mac/INFO/locust.runners: Ramping to 307 users at a rate of 20.00 per second
+[2026-04-17 01:35:59,744] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 307} (307 total users)
+[2026-04-17 01:36:00,752] Mac/INFO/locust.runners: Shape test updating to 314 users at 20.00 spawn rate
+[2026-04-17 01:36:00,752] Mac/INFO/locust.runners: Ramping to 314 users at a rate of 20.00 per second
+[2026-04-17 01:36:00,753] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 314} (314 total users)
+[2026-04-17 01:36:01,761] Mac/INFO/locust.runners: Shape test updating to 321 users at 20.00 spawn rate
+[2026-04-17 01:36:01,762] Mac/INFO/locust.runners: Ramping to 321 users at a rate of 20.00 per second
+[2026-04-17 01:36:01,762] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 321} (321 total users)
+[2026-04-17 01:36:02,772] Mac/INFO/locust.runners: Shape test updating to 327 users at 20.00 spawn rate
+[2026-04-17 01:36:02,772] Mac/INFO/locust.runners: Ramping to 327 users at a rate of 20.00 per second
+[2026-04-17 01:36:02,774] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 327} (327 total users)
+[2026-04-17 01:36:03,787] Mac/INFO/locust.runners: Shape test updating to 334 users at 20.00 spawn rate
+[2026-04-17 01:36:03,788] Mac/INFO/locust.runners: Ramping to 334 users at a rate of 20.00 per second
+[2026-04-17 01:36:03,789] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 334} (334 total users)
+[2026-04-17 01:36:04,796] Mac/INFO/locust.runners: Shape test updating to 341 users at 20.00 spawn rate
+[2026-04-17 01:36:04,796] Mac/INFO/locust.runners: Ramping to 341 users at a rate of 20.00 per second
+[2026-04-17 01:36:04,797] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 341} (341 total users)
+[2026-04-17 01:36:05,808] Mac/INFO/locust.runners: Shape test updating to 347 users at 20.00 spawn rate
+[2026-04-17 01:36:05,809] Mac/INFO/locust.runners: Ramping to 347 users at a rate of 20.00 per second
+[2026-04-17 01:36:05,810] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 347} (347 total users)
+[2026-04-17 01:36:06,818] Mac/INFO/locust.runners: Shape test updating to 354 users at 20.00 spawn rate
+[2026-04-17 01:36:06,818] Mac/INFO/locust.runners: Ramping to 354 users at a rate of 20.00 per second
+[2026-04-17 01:36:06,820] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 354} (354 total users)
+[2026-04-17 01:36:07,825] Mac/INFO/locust.runners: Shape test updating to 361 users at 20.00 spawn rate
+[2026-04-17 01:36:07,826] Mac/INFO/locust.runners: Ramping to 361 users at a rate of 20.00 per second
+[2026-04-17 01:36:07,827] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 361} (361 total users)
+[2026-04-17 01:36:08,837] Mac/INFO/locust.runners: Shape test updating to 368 users at 20.00 spawn rate
+[2026-04-17 01:36:08,837] Mac/INFO/locust.runners: Ramping to 368 users at a rate of 20.00 per second
+[2026-04-17 01:36:08,839] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 368} (368 total users)
+[2026-04-17 01:36:09,850] Mac/INFO/locust.runners: Shape test updating to 374 users at 20.00 spawn rate
+[2026-04-17 01:36:09,850] Mac/INFO/locust.runners: Ramping to 374 users at a rate of 20.00 per second
+[2026-04-17 01:36:09,851] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 374} (374 total users)
+[2026-04-17 01:36:10,859] Mac/INFO/locust.runners: Shape test updating to 381 users at 20.00 spawn rate
+[2026-04-17 01:36:10,859] Mac/INFO/locust.runners: Ramping to 381 users at a rate of 20.00 per second
+[2026-04-17 01:36:10,861] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 381} (381 total users)
+[2026-04-17 01:36:11,861] Mac/INFO/locust.runners: Shape test updating to 388 users at 20.00 spawn rate
+[2026-04-17 01:36:11,861] Mac/INFO/locust.runners: Ramping to 388 users at a rate of 20.00 per second
+[2026-04-17 01:36:11,865] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 388} (388 total users)
+[2026-04-17 01:36:12,875] Mac/INFO/locust.runners: Shape test updating to 395 users at 20.00 spawn rate
+[2026-04-17 01:36:12,875] Mac/INFO/locust.runners: Ramping to 395 users at a rate of 20.00 per second
+[2026-04-17 01:36:12,878] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 395} (395 total users)
+[2026-04-17 01:36:13,887] Mac/INFO/locust.runners: Shape test updating to 401 users at 20.00 spawn rate
+[2026-04-17 01:36:13,889] Mac/INFO/locust.runners: Ramping to 401 users at a rate of 20.00 per second
+[2026-04-17 01:36:13,890] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 401} (401 total users)
+[2026-04-17 01:36:14,900] Mac/INFO/locust.runners: Shape test updating to 408 users at 20.00 spawn rate
+[2026-04-17 01:36:14,900] Mac/INFO/locust.runners: Ramping to 408 users at a rate of 20.00 per second
+[2026-04-17 01:36:14,902] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 408} (408 total users)
+[2026-04-17 01:36:15,917] Mac/INFO/locust.runners: Shape test updating to 415 users at 20.00 spawn rate
+[2026-04-17 01:36:15,917] Mac/INFO/locust.runners: Ramping to 415 users at a rate of 20.00 per second
+[2026-04-17 01:36:15,920] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 415} (415 total users)
+[2026-04-17 01:36:16,919] Mac/INFO/locust.runners: Shape test updating to 422 users at 20.00 spawn rate
+[2026-04-17 01:36:16,919] Mac/INFO/locust.runners: Ramping to 422 users at a rate of 20.00 per second
+[2026-04-17 01:36:16,919] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 422} (422 total users)
+[2026-04-17 01:36:17,931] Mac/INFO/locust.runners: Shape test updating to 428 users at 20.00 spawn rate
+[2026-04-17 01:36:17,932] Mac/INFO/locust.runners: Ramping to 428 users at a rate of 20.00 per second
+[2026-04-17 01:36:17,933] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 428} (428 total users)
+[2026-04-17 01:36:18,941] Mac/INFO/locust.runners: Shape test updating to 435 users at 20.00 spawn rate
+[2026-04-17 01:36:18,941] Mac/INFO/locust.runners: Ramping to 435 users at a rate of 20.00 per second
+[2026-04-17 01:36:18,942] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 435} (435 total users)
+[2026-04-17 01:36:19,957] Mac/INFO/locust.runners: Shape test updating to 442 users at 20.00 spawn rate
+[2026-04-17 01:36:19,958] Mac/INFO/locust.runners: Ramping to 442 users at a rate of 20.00 per second
+[2026-04-17 01:36:19,959] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 442} (442 total users)
+[2026-04-17 01:36:20,968] Mac/INFO/locust.runners: Shape test updating to 449 users at 20.00 spawn rate
+[2026-04-17 01:36:20,968] Mac/INFO/locust.runners: Ramping to 449 users at a rate of 20.00 per second
+[2026-04-17 01:36:20,970] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 449} (449 total users)
+[2026-04-17 01:36:21,970] Mac/INFO/locust.runners: Shape test updating to 455 users at 20.00 spawn rate
+[2026-04-17 01:36:21,970] Mac/INFO/locust.runners: Ramping to 455 users at a rate of 20.00 per second
+[2026-04-17 01:36:21,971] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 455} (455 total users)
+[2026-04-17 01:36:22,982] Mac/INFO/locust.runners: Shape test updating to 462 users at 20.00 spawn rate
+[2026-04-17 01:36:22,982] Mac/INFO/locust.runners: Ramping to 462 users at a rate of 20.00 per second
+[2026-04-17 01:36:22,983] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 462} (462 total users)
+[2026-04-17 01:36:23,997] Mac/INFO/locust.runners: Shape test updating to 469 users at 20.00 spawn rate
+[2026-04-17 01:36:23,998] Mac/INFO/locust.runners: Ramping to 469 users at a rate of 20.00 per second
+[2026-04-17 01:36:23,999] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 469} (469 total users)
+[2026-04-17 01:36:25,009] Mac/INFO/locust.runners: Shape test updating to 475 users at 20.00 spawn rate
+[2026-04-17 01:36:25,009] Mac/INFO/locust.runners: Ramping to 475 users at a rate of 20.00 per second
+[2026-04-17 01:36:25,010] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 475} (475 total users)
+[2026-04-17 01:36:26,019] Mac/INFO/locust.runners: Shape test updating to 482 users at 20.00 spawn rate
+[2026-04-17 01:36:26,019] Mac/INFO/locust.runners: Ramping to 482 users at a rate of 20.00 per second
+[2026-04-17 01:36:26,021] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 482} (482 total users)
+[2026-04-17 01:36:27,021] Mac/INFO/locust.runners: Shape test updating to 489 users at 20.00 spawn rate
+[2026-04-17 01:36:27,021] Mac/INFO/locust.runners: Ramping to 489 users at a rate of 20.00 per second
+[2026-04-17 01:36:27,021] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 489} (489 total users)
+[2026-04-17 01:36:28,030] Mac/INFO/locust.runners: Shape test updating to 496 users at 20.00 spawn rate
+[2026-04-17 01:36:28,031] Mac/INFO/locust.runners: Ramping to 496 users at a rate of 20.00 per second
+[2026-04-17 01:36:28,032] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 496} (496 total users)
+[2026-04-17 01:36:29,038] Mac/INFO/locust.runners: Shape test updating to 500 users at 50.00 spawn rate
+[2026-04-17 01:36:29,039] Mac/INFO/locust.runners: Ramping to 500 users at a rate of 50.00 per second
+[2026-04-17 01:36:29,041] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 500} (500 total users)
+[2026-04-17 01:45:28,982] Mac/INFO/locust.runners: Shape test updating to 100 users at 50.00 spawn rate
+[2026-04-17 01:45:28,983] Mac/INFO/locust.runners: Ramping to 100 users at a rate of 50.00 per second
+[2026-04-17 01:45:36,053] Mac/INFO/locust.runners: All users spawned: {"MicroserviceUser": 100} (100 total users)
+[2026-04-17 01:55:29,165] Mac/INFO/locust.runners: Shape test stopping
+[2026-04-17 01:55:29,239] Mac/INFO/locust.main: Shape test completed, shutting down
+[2026-04-17 01:55:29,240] Mac/INFO/locust.main: Run time limit set to 1500 seconds
+[2026-04-17 01:55:29,311] Mac/INFO/locust.main: writing html report to file: results/baseline/run1.html
+[2026-04-17 01:55:29,313] Mac/INFO/locust.main: Shutting down (exit code 1)

@@ -1,0 +1,95 @@
+---
+# ServiceAccount for the PID controller pod
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: pid-controller
+  namespace: default
+
+---
+# ClusterRole: grants read/write access to Deployments
+# Scoped to the minimum permissions required:
+#   - get/list: read current replica count
+#   - patch: apply scaling decisions
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: pid-controller-role
+rules:
+  - apiGroups: ["apps"]
+    resources: ["deployments"]
+    verbs: ["get", "list", "patch"]
+
+---
+# ClusterRoleBinding: bind the role to the service account
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: pid-controller-binding
+subjects:
+  - kind: ServiceAccount
+    name: pid-controller
+    namespace: default
+roleRef:
+  kind: ClusterRole
+  name: pid-controller-role
+  apiGroup: rbac.authorization.k8s.io
+
+---
+# Deployment: runs the PID controller as a standalone pod
+# This replaces the HPA for the experimental group.
+# Do NOT apply plant-hpa.yaml when this is running.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pid-controller
+  namespace: default
+  labels:
+    app: pid-controller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pid-controller
+  template:
+    metadata:
+      labels:
+        app: pid-controller
+    spec:
+      serviceAccountName: pid-controller
+      containers:
+        - name: pid-controller
+          image: pid-controller:v1
+          imagePullPolicy: Never
+          env:
+            - name: PROMETHEUS_URL
+              value: "http://prometheus-kube-prometheus-prometheus.default.svc.cluster.local:9090"
+            - name: DEPLOYMENT_NAME
+              value: "go-plant"
+            - name: NAMESPACE
+              value: "default"
+            - name: LOOP_INTERVAL
+              value: "15"
+            - name: KP
+              value: "0.5"
+            - name: KI
+              value: "0.05"
+            - name: KD
+              value: "0.1"
+            - name: SETPOINT
+              value: "0.0"
+            - name: MIN_REPLICAS
+              value: "1"
+            - name: MAX_REPLICAS
+              value: "10"
+            - name: DEAD_BAND
+              value: "2.0"
+            - name: LOG_LEVEL
+              value: "INFO"
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "64Mi"
+            limits:
+              cpu: "100m"
+              memory: "128Mi"

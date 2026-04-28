@@ -197,3 +197,202 @@
 [2026-04-17 03:10:32,871] Mac/INFO/locust.main: Run time limit set to 1500 seconds
 [2026-04-17 03:10:32,900] Mac/INFO/locust.main: writing html report to file: results/baseline/run2.html
 [2026-04-17 03:10:32,901] Mac/INFO/locust.main: Shutting down (exit code 1)
+[2026-04-26 20:34:56,091] Asfands-MacBook-Pro/INFO/locust.main: Starting Locust 2.43.4
+[2026-04-26 20:34:56,097] Asfands-MacBook-Pro/WARNING/locust.main: --run-time, --users or --spawn-rate have no impact on LoadShapes unless the shape class explicitly reads them. See: docs.locust.io/en/stable/custom-load-shape.html#use-common-options
+[2026-04-26 20:34:56,097] Asfands-MacBook-Pro/WARNING/locust.main: The following option(s) will be ignored: --users, --spawn-rate, --run-time
+[2026-04-26 20:34:56,105] Asfands-MacBook-Pro/INFO/locust.runners: Shape test starting.
+[2026-04-26 20:34:56,105] Asfands-MacBook-Pro/INFO/locust.runners: Shape worker starting
+[2026-04-26 20:34:56,105] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 100 users at 10.00 spawn rate
+[2026-04-26 20:34:56,105] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 100 users at a rate of 10.00 per second
+[2026-04-26 20:35:05,133] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 100} (100 total users)
+[2026-04-26 20:39:56,152] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 100 users at 20.00 spawn rate
+[2026-04-26 20:39:56,152] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 100 users at a rate of 20.00 per second
+[2026-04-26 20:39:56,152] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 100} (100 total users)
+[2026-04-26 20:39:57,155] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 107 users at 20.00 spawn rate
+[2026-04-26 20:39:57,155] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 107 users at a rate of 20.00 per second
+[2026-04-26 20:39:57,156] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 107} (107 total users)
+[2026-04-26 20:39:58,164] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 113 users at 20.00 spawn rate
+[2026-04-26 20:39:58,164] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 113 users at a rate of 20.00 per second
+[2026-04-26 20:39:58,166] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 113} (113 total users)
+[2026-04-26 20:39:59,170] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 120 users at 20.00 spawn rate
+[2026-04-26 20:39:59,170] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 120 users at a rate of 20.00 per second
+[2026-04-26 20:39:59,173] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 120} (120 total users)
+[2026-04-26 20:40:00,178] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 127 users at 20.00 spawn rate
+[2026-04-26 20:40:00,178] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 127 users at a rate of 20.00 per second
+[2026-04-26 20:40:00,179] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 127} (127 total users)
+[2026-04-26 20:40:01,184] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 133 users at 20.00 spawn rate
+[2026-04-26 20:40:01,184] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 133 users at a rate of 20.00 per second
+[2026-04-26 20:40:01,185] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 133} (133 total users)
+[2026-04-26 20:40:02,194] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 140 users at 20.00 spawn rate
+[2026-04-26 20:40:02,195] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 140 users at a rate of 20.00 per second
+[2026-04-26 20:40:02,196] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 140} (140 total users)
+[2026-04-26 20:40:03,205] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 147 users at 20.00 spawn rate
+[2026-04-26 20:40:03,205] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 147 users at a rate of 20.00 per second
+[2026-04-26 20:40:03,206] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 147} (147 total users)
+[2026-04-26 20:40:04,211] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 154 users at 20.00 spawn rate
+[2026-04-26 20:40:04,211] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 154 users at a rate of 20.00 per second
+[2026-04-26 20:40:04,213] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 154} (154 total users)
+[2026-04-26 20:40:05,224] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 160 users at 20.00 spawn rate
+[2026-04-26 20:40:05,224] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 160 users at a rate of 20.00 per second
+[2026-04-26 20:40:05,226] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 160} (160 total users)
+[2026-04-26 20:40:06,228] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 167 users at 20.00 spawn rate
+[2026-04-26 20:40:06,228] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 167 users at a rate of 20.00 per second
+[2026-04-26 20:40:06,230] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 167} (167 total users)
+[2026-04-26 20:40:07,236] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 174 users at 20.00 spawn rate
+[2026-04-26 20:40:07,237] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 174 users at a rate of 20.00 per second
+[2026-04-26 20:40:07,238] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 174} (174 total users)
+[2026-04-26 20:40:08,243] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 180 users at 20.00 spawn rate
+[2026-04-26 20:40:08,243] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 180 users at a rate of 20.00 per second
+[2026-04-26 20:40:08,244] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 180} (180 total users)
+[2026-04-26 20:40:09,254] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 187 users at 20.00 spawn rate
+[2026-04-26 20:40:09,254] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 187 users at a rate of 20.00 per second
+[2026-04-26 20:40:09,255] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 187} (187 total users)
+[2026-04-26 20:40:10,259] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 194 users at 20.00 spawn rate
+[2026-04-26 20:40:10,260] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 194 users at a rate of 20.00 per second
+[2026-04-26 20:40:10,261] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 194} (194 total users)
+[2026-04-26 20:40:11,268] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 201 users at 20.00 spawn rate
+[2026-04-26 20:40:11,268] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 201 users at a rate of 20.00 per second
+[2026-04-26 20:40:11,269] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 201} (201 total users)
+[2026-04-26 20:40:12,273] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 207 users at 20.00 spawn rate
+[2026-04-26 20:40:12,273] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 207 users at a rate of 20.00 per second
+[2026-04-26 20:40:12,273] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 207} (207 total users)
+[2026-04-26 20:40:13,280] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 214 users at 20.00 spawn rate
+[2026-04-26 20:40:13,281] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 214 users at a rate of 20.00 per second
+[2026-04-26 20:40:13,282] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 214} (214 total users)
+[2026-04-26 20:40:14,284] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 221 users at 20.00 spawn rate
+[2026-04-26 20:40:14,285] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 221 users at a rate of 20.00 per second
+[2026-04-26 20:40:14,285] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 221} (221 total users)
+[2026-04-26 20:40:15,291] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 227 users at 20.00 spawn rate
+[2026-04-26 20:40:15,292] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 227 users at a rate of 20.00 per second
+[2026-04-26 20:40:15,292] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 227} (227 total users)
+[2026-04-26 20:40:16,300] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 234 users at 20.00 spawn rate
+[2026-04-26 20:40:16,301] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 234 users at a rate of 20.00 per second
+[2026-04-26 20:40:16,303] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 234} (234 total users)
+[2026-04-26 20:40:17,308] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 241 users at 20.00 spawn rate
+[2026-04-26 20:40:17,309] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 241 users at a rate of 20.00 per second
+[2026-04-26 20:40:17,311] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 241} (241 total users)
+[2026-04-26 20:40:18,316] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 248 users at 20.00 spawn rate
+[2026-04-26 20:40:18,316] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 248 users at a rate of 20.00 per second
+[2026-04-26 20:40:18,317] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 248} (248 total users)
+[2026-04-26 20:40:19,322] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 254 users at 20.00 spawn rate
+[2026-04-26 20:40:19,322] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 254 users at a rate of 20.00 per second
+[2026-04-26 20:40:19,323] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 254} (254 total users)
+[2026-04-26 20:40:20,327] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 261 users at 20.00 spawn rate
+[2026-04-26 20:40:20,328] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 261 users at a rate of 20.00 per second
+[2026-04-26 20:40:20,329] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 261} (261 total users)
+[2026-04-26 20:40:21,336] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 268 users at 20.00 spawn rate
+[2026-04-26 20:40:21,336] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 268 users at a rate of 20.00 per second
+[2026-04-26 20:40:21,337] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 268} (268 total users)
+[2026-04-26 20:40:22,345] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 274 users at 20.00 spawn rate
+[2026-04-26 20:40:22,345] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 274 users at a rate of 20.00 per second
+[2026-04-26 20:40:22,348] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 274} (274 total users)
+[2026-04-26 20:40:23,352] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 281 users at 20.00 spawn rate
+[2026-04-26 20:40:23,352] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 281 users at a rate of 20.00 per second
+[2026-04-26 20:40:23,353] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 281} (281 total users)
+[2026-04-26 20:40:24,354] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 288 users at 20.00 spawn rate
+[2026-04-26 20:40:24,354] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 288 users at a rate of 20.00 per second
+[2026-04-26 20:40:24,354] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 288} (288 total users)
+[2026-04-26 20:40:25,361] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 295 users at 20.00 spawn rate
+[2026-04-26 20:40:25,361] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 295 users at a rate of 20.00 per second
+[2026-04-26 20:40:25,362] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 295} (295 total users)
+[2026-04-26 20:40:26,368] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 301 users at 20.00 spawn rate
+[2026-04-26 20:40:26,368] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 301 users at a rate of 20.00 per second
+[2026-04-26 20:40:26,369] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 301} (301 total users)
+[2026-04-26 20:40:27,372] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 308 users at 20.00 spawn rate
+[2026-04-26 20:40:27,373] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 308 users at a rate of 20.00 per second
+[2026-04-26 20:40:27,373] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 308} (308 total users)
+[2026-04-26 20:40:28,387] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 315 users at 20.00 spawn rate
+[2026-04-26 20:40:28,388] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 315 users at a rate of 20.00 per second
+[2026-04-26 20:40:28,389] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 315} (315 total users)
+[2026-04-26 20:40:29,390] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 321 users at 20.00 spawn rate
+[2026-04-26 20:40:29,390] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 321 users at a rate of 20.00 per second
+[2026-04-26 20:40:29,390] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 321} (321 total users)
+[2026-04-26 20:40:30,395] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 328 users at 20.00 spawn rate
+[2026-04-26 20:40:30,395] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 328 users at a rate of 20.00 per second
+[2026-04-26 20:40:30,397] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 328} (328 total users)
+[2026-04-26 20:40:31,399] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 335 users at 20.00 spawn rate
+[2026-04-26 20:40:31,400] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 335 users at a rate of 20.00 per second
+[2026-04-26 20:40:31,400] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 335} (335 total users)
+[2026-04-26 20:40:32,405] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 341 users at 20.00 spawn rate
+[2026-04-26 20:40:32,405] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 341 users at a rate of 20.00 per second
+[2026-04-26 20:40:32,406] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 341} (341 total users)
+[2026-04-26 20:40:33,413] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 348 users at 20.00 spawn rate
+[2026-04-26 20:40:33,413] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 348 users at a rate of 20.00 per second
+[2026-04-26 20:40:33,415] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 348} (348 total users)
+[2026-04-26 20:40:34,418] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 355 users at 20.00 spawn rate
+[2026-04-26 20:40:34,419] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 355 users at a rate of 20.00 per second
+[2026-04-26 20:40:34,420] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 355} (355 total users)
+[2026-04-26 20:40:35,424] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 362 users at 20.00 spawn rate
+[2026-04-26 20:40:35,425] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 362 users at a rate of 20.00 per second
+[2026-04-26 20:40:35,425] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 362} (362 total users)
+[2026-04-26 20:40:36,431] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 368 users at 20.00 spawn rate
+[2026-04-26 20:40:36,431] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 368 users at a rate of 20.00 per second
+[2026-04-26 20:40:36,431] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 368} (368 total users)
+[2026-04-26 20:40:37,437] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 375 users at 20.00 spawn rate
+[2026-04-26 20:40:37,437] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 375 users at a rate of 20.00 per second
+[2026-04-26 20:40:37,438] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 375} (375 total users)
+[2026-04-26 20:40:38,446] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 382 users at 20.00 spawn rate
+[2026-04-26 20:40:38,446] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 382 users at a rate of 20.00 per second
+[2026-04-26 20:40:38,447] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 382} (382 total users)
+[2026-04-26 20:40:39,452] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 388 users at 20.00 spawn rate
+[2026-04-26 20:40:39,452] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 388 users at a rate of 20.00 per second
+[2026-04-26 20:40:39,453] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 388} (388 total users)
+[2026-04-26 20:40:40,459] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 395 users at 20.00 spawn rate
+[2026-04-26 20:40:40,459] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 395 users at a rate of 20.00 per second
+[2026-04-26 20:40:40,461] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 395} (395 total users)
+[2026-04-26 20:40:41,467] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 402 users at 20.00 spawn rate
+[2026-04-26 20:40:41,468] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 402 users at a rate of 20.00 per second
+[2026-04-26 20:40:41,469] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 402} (402 total users)
+[2026-04-26 20:40:42,470] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 409 users at 20.00 spawn rate
+[2026-04-26 20:40:42,470] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 409 users at a rate of 20.00 per second
+[2026-04-26 20:40:42,470] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 409} (409 total users)
+[2026-04-26 20:40:43,482] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 415 users at 20.00 spawn rate
+[2026-04-26 20:40:43,482] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 415 users at a rate of 20.00 per second
+[2026-04-26 20:40:43,483] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 415} (415 total users)
+[2026-04-26 20:40:44,487] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 422 users at 20.00 spawn rate
+[2026-04-26 20:40:44,487] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 422 users at a rate of 20.00 per second
+[2026-04-26 20:40:44,489] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 422} (422 total users)
+[2026-04-26 20:40:45,499] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 429 users at 20.00 spawn rate
+[2026-04-26 20:40:45,500] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 429 users at a rate of 20.00 per second
+[2026-04-26 20:40:45,503] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 429} (429 total users)
+[2026-04-26 20:40:46,506] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 436 users at 20.00 spawn rate
+[2026-04-26 20:40:46,507] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 436 users at a rate of 20.00 per second
+[2026-04-26 20:40:46,508] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 436} (436 total users)
+[2026-04-26 20:40:47,513] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 442 users at 20.00 spawn rate
+[2026-04-26 20:40:47,513] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 442 users at a rate of 20.00 per second
+[2026-04-26 20:40:47,514] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 442} (442 total users)
+[2026-04-26 20:40:48,519] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 449 users at 20.00 spawn rate
+[2026-04-26 20:40:48,520] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 449 users at a rate of 20.00 per second
+[2026-04-26 20:40:48,521] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 449} (449 total users)
+[2026-04-26 20:40:49,531] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 456 users at 20.00 spawn rate
+[2026-04-26 20:40:49,532] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 456 users at a rate of 20.00 per second
+[2026-04-26 20:40:49,533] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 456} (456 total users)
+[2026-04-26 20:40:50,538] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 462 users at 20.00 spawn rate
+[2026-04-26 20:40:50,538] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 462 users at a rate of 20.00 per second
+[2026-04-26 20:40:50,539] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 462} (462 total users)
+[2026-04-26 20:40:51,544] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 469 users at 20.00 spawn rate
+[2026-04-26 20:40:51,544] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 469 users at a rate of 20.00 per second
+[2026-04-26 20:40:51,545] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 469} (469 total users)
+[2026-04-26 20:40:52,549] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 476 users at 20.00 spawn rate
+[2026-04-26 20:40:52,549] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 476 users at a rate of 20.00 per second
+[2026-04-26 20:40:52,550] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 476} (476 total users)
+[2026-04-26 20:40:53,551] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 482 users at 20.00 spawn rate
+[2026-04-26 20:40:53,552] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 482 users at a rate of 20.00 per second
+[2026-04-26 20:40:53,553] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 482} (482 total users)
+[2026-04-26 20:40:54,558] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 489 users at 20.00 spawn rate
+[2026-04-26 20:40:54,558] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 489 users at a rate of 20.00 per second
+[2026-04-26 20:40:54,559] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 489} (489 total users)
+[2026-04-26 20:40:55,566] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 496 users at 20.00 spawn rate
+[2026-04-26 20:40:55,566] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 496 users at a rate of 20.00 per second
+[2026-04-26 20:40:55,568] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 496} (496 total users)
+[2026-04-26 20:40:56,571] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 500 users at 50.00 spawn rate
+[2026-04-26 20:40:56,571] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 500 users at a rate of 50.00 per second
+[2026-04-26 20:40:56,572] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 500} (500 total users)
+[2026-04-26 20:49:56,813] Asfands-MacBook-Pro/INFO/locust.runners: Shape test updating to 100 users at 50.00 spawn rate
+[2026-04-26 20:49:56,813] Asfands-MacBook-Pro/INFO/locust.runners: Ramping to 100 users at a rate of 50.00 per second
+[2026-04-26 20:50:03,890] Asfands-MacBook-Pro/INFO/locust.runners: All users spawned: {"MicroserviceUser": 100} (100 total users)
+[2026-04-26 20:59:56,943] Asfands-MacBook-Pro/INFO/locust.runners: Shape test stopping
+[2026-04-26 20:59:56,986] Asfands-MacBook-Pro/INFO/locust.main: Shape test completed, shutting down
+[2026-04-26 20:59:56,986] Asfands-MacBook-Pro/INFO/locust.main: Run time limit set to 1500 seconds
+[2026-04-26 20:59:57,016] Asfands-MacBook-Pro/INFO/locust.main: writing html report to file: results/baseline/run2.html
+[2026-04-26 20:59:57,017] Asfands-MacBook-Pro/INFO/locust.main: Shutting down (exit code 1)

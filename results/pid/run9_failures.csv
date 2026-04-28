@@ -1,0 +1,9 @@
+Method,Name,Error,Occurrences
+GET,/work,CatchResponseError('503: Overloaded — entering retry storm'),13074
+GET,/work (retry 2),CatchResponseError('503 on retry 2/3: retry storm sustaining'),7637
+GET,/work (retry 1),CatchResponseError('503 on retry 1/3: retry storm sustaining'),9635
+GET,/work,CatchResponseError('Network error'),5286
+GET,/work (retry 1),CatchResponseError('Unexpected status 0 on retry 1'),1356
+GET,/work (retry 3),CatchResponseError('Unexpected status 0 on retry 3'),617
+GET,/work (retry 2),CatchResponseError('Unexpected status 0 on retry 2'),835
+GET,/work (retry 3),CatchResponseError('503 on retry 3/3: retry storm sustaining'),6113

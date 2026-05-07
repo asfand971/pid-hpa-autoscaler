@@ -28,7 +28,7 @@ results/baseline_v3/   ← Final HPA control-group results
 results/pid/           ← Final PID experimental-group results
 ```
 
-> ⚠️ Older folders (`results/baseline/`, `results/baseline_v2/`) are calibration/pilot outputs. Do not use them for final analysis.
+> (Caution)️ Older folders (`results/baseline/`, `results/baseline_v2/`) are calibration/pilot outputs. Do not use them for final analysis.
 
 ---
 
@@ -89,8 +89,8 @@ pid-hpa-autoscaler/
 ├── scripts/                # Experiment automation scripts
 ├── analysis/               # Python scripts for result processing + charts
 ├── results/
-│   ├── baseline_v3/        # ✅ Final HPA results (use this)
-│   └── pid/                # ✅ Final PID results (use this)
+│   ├── baseline_v3/        # Final HPA results (use this)
+│   └── pid/                # Final PID results (use this)
 └── README.md
 ```
 
@@ -218,7 +218,7 @@ The proxy measures the time after the recovery phase begins until failures/s rem
 | Locust | 2.x |
 | Prometheus / kube-prometheus-stack | Via Helm |
 
-> ⚠️ The HPA manifest uses `autoscaling/v2`, which requires Kubernetes 1.23+. Minikube v1.32+ with the Docker driver is recommended for consistent results.
+> (Caution) The HPA manifest uses `autoscaling/v2`, which requires Kubernetes 1.23+. Minikube v1.32+ with the Docker driver is recommended for consistent results.
 
 Python dependencies:
 

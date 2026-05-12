@@ -1,0 +1,9 @@
+metric,u_statistic,p_value,cliffs_delta_pid_relative_to_hpa,effect_size,hpa_n,pid_n
+Failure rate,98.0,0.0003298385207779935,-0.96,large,10,10
+Failures/s,100.0,0.00018267179110955002,-1.0,large,10,10
+Average response time,0.0,0.00018267179110955002,1.0,large,10,10
+Median response time,0.0,0.0001349668090972817,1.0,large,10,10
+p95 latency,0.0,6.203353636013876e-05,1.0,large,10,10
+p99 latency,15.0,0.002189216089688577,0.7,large,10,10
+Requests/s,100.0,0.00018267179110955002,-1.0,large,10,10
+Effective successful requests/s,18.0,0.017257456083119765,0.64,large,10,10

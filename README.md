@@ -4,7 +4,7 @@
 
 > **Key result:** PID reduced the aggregate failure rate from 73.39% to 43.98% (−40.07%), reduced failures/s from 99.60 to 34.79 (−65.07%), and delivered 22.94% more successful requests per second than HPA — at the cost of higher queuing latency under saturation.
 
-This repository contains the implementation, experiment automation, result exports, and analysis scripts for the MSc Software Engineering dissertation comparing Kubernetes' native **Horizontal Pod Autoscaler (HPA)** against a custom **application-aware PID autoscaler** under a retry-storm workload.
+This repository contains the implementation, experiment automation, result exports, reproducible analysis scripts, generated statistical tables, and generated figures for the MSc Software Engineering dissertation comparing Kubernetes' native **Horizontal Pod Autoscaler (HPA)** against a custom **application-aware PID autoscaler** under a retry-storm workload.
 
 ---
 
@@ -28,7 +28,7 @@ results/baseline_v3/   ← Final HPA control-group results
 results/pid/           ← Final PID experimental-group results
 ```
 
-> (Caution)️ Older folders (`results/baseline/`, `results/baseline_v2/`) are calibration/pilot outputs. Do not use them for final analysis.
+> **Note:** Older folders (`results/baseline/`, `results/baseline_v2/`) are calibration/pilot outputs. Do not use them for final analysis.
 
 ---
 
@@ -87,7 +87,12 @@ pid-hpa-autoscaler/
 ├── k8s/                    # Kubernetes manifests, HPA config, services
 ├── locustfiles/            # Locust retry-storm workload scripts
 ├── scripts/                # Experiment automation scripts
-├── analysis/               # Python scripts for result processing + charts
+├── analysis/               # Reproducible statistical analysis scripts and outputs
+│   ├── statistical_test.py # Regenerates statistical tables and dissertation figures
+│   ├── requirements.txt    # Python analysis dependencies
+│   └── output/
+│       ├── tables/         # Generated CSV summaries and statistical test outputs
+│       └── figures/        # Generated PNG figures used as reproducibility evidence
 ├── results/
 │   ├── baseline_v3/        # Final HPA results (use this)
 │   └── pid/                # Final PID results (use this)
@@ -109,10 +114,11 @@ The Go microservice exposes three endpoints:
 The `/work` endpoint performs bcrypt hashing at cost factor 10, creating a reproducible CPU-bound workload that saturates predictably under load.
 
 **Overload-shedding mechanism:**
-- The service tracks active in-flight requests via an atomic counter
-- When active requests exceed `maxConcurrent = 50`, the service immediately returns HTTP 503
-- Each rejection increments `plant_http_requests_rejected_total`
-- This gives the PID controller a direct application-layer overload signal
+
+- The service tracks active in-flight requests via an atomic counter.
+- When active requests exceed `maxConcurrent = 50`, the service immediately returns HTTP 503.
+- Each rejection increments `plant_http_requests_rejected_total`.
+- This gives the PID controller a direct application-layer overload signal.
 
 ---
 
@@ -129,6 +135,7 @@ The workload is generated using Locust and follows a three-phase 25-minute profi
 > The Locust script intentionally performs aggressive retries **without exponential backoff or jitter**. This is deliberate — the experiment is designed to simulate the positive-feedback loop of a retry storm. The 10× increase from 100 to 1,000 simulated users is the chaos stimulus.
 
 Exported Locust result files per run:
+
 - `*_stats.csv` — aggregate statistics
 - `*_stats_history.csv` — per-second time-series
 - `*_failures.csv` — failure log
@@ -157,7 +164,7 @@ Final analysis: 10 HPA runs vs 10 PID runs, each 25 minutes, same workload profi
 
 ### 7.2 Statistical Analysis
 
-All comparisons evaluated with Mann-Whitney U test (non-parametric, n=10 per group) and Cliff's delta effect size.
+All comparisons were evaluated with the Mann-Whitney U test because each controller group contained ten runs and normality was not assumed. Cliff's delta was used as a non-parametric effect-size measure.
 
 | Metric | U statistic | p-value | Cliff's delta | Interpretation |
 |---|---:|---:|---:|---|
@@ -218,12 +225,18 @@ The proxy measures the time after the recovery phase begins until failures/s rem
 | Locust | 2.x |
 | Prometheus / kube-prometheus-stack | Via Helm |
 
-> (Caution) The HPA manifest uses `autoscaling/v2`, which requires Kubernetes 1.23+. Minikube v1.32+ with the Docker driver is recommended for consistent results.
+> **Note:** The HPA manifest uses `autoscaling/v2`, which requires Kubernetes 1.23+. Minikube v1.32+ with the Docker driver is recommended for consistent results.
 
-Python dependencies:
+Experiment/runtime dependencies:
 
 ```bash
-pip install pandas scipy matplotlib kubernetes requests locust
+pip install kubernetes requests locust
+```
+
+Analysis dependencies:
+
+```bash
+pip install -r analysis/requirements.txt
 ```
 
 ---
@@ -282,46 +295,126 @@ python controller/pid_controller.py
 
 ---
 
-## 11. Analysis Workflow
+## 11. Reproducible Analysis Workflow
 
-Use only `results/baseline_v3/` and `results/pid/` for final analysis.
+Use only `results/baseline_v3/` and `results/pid/` for final dissertation analysis.
 
-```python
-# Typical analysis steps
+The reproducible analysis script is provided in:
 
-# 1. Load aggregate stats
-stats_df = pd.concat([pd.read_csv(f) for f in glob("results/*/run*_stats.csv")])
+```text
+analysis/statistical_test.py
+```
 
-# 2. Load time-series history
-history_df = pd.concat([pd.read_csv(f) for f in glob("results/*/run*_stats_history.csv")])
+Install the analysis dependencies:
 
-# 3. Calculate metrics
-# failure_rate = failures / total_requests
-# effective_rps = requests_per_s * (1 - failure_rate)
+```bash
+pip install -r analysis/requirements.txt
+```
 
-# 4. Statistical testing
-from scipy.stats import mannwhitneyu
-stat, p = mannwhitneyu(hpa_values, pid_values, alternative='two-sided')
+Run the analysis from the repository root:
 
-# 5. Cliff's delta (effect size)
-# delta = (U / (n1 * n2)) * 2 - 1
+```bash
+python analysis/statistical_test.py
+```
 
-# 6. Generate charts: failure rate by run, latency, throughput,
-#    mean failure intensity over time, p95 latency over time,
-#    request-level recovery proxy box plots
+The script regenerates the dissertation analysis from the final Locust CSV exports and writes outputs to:
+
+```text
+analysis/output/tables/
+analysis/output/figures/
+```
+
+### 11.1 Analysis Pipeline
+
+The script performs the following steps:
+
+1. Loads final HPA CSV exports from `results/baseline_v3/` and final PID CSV exports from `results/pid/`.
+2. Reads Locust `*_stats.csv` files to calculate run-level aggregate metrics.
+3. Reads Locust `*_stats_history.csv` files to calculate time-series and phase-based metrics.
+4. Calculates failure rate as:
+
+   ```text
+   failure_rate = failed_requests / total_requests
+   ```
+
+5. Calculates effective successful requests per second as:
+
+   ```text
+   effective_successful_rps = raw_requests_per_second × (1 − failure_rate)
+   ```
+
+6. Splits each 25-minute run into the dissertation workload phases:
+
+   ```text
+   Baseline: 0–300 seconds
+   Chaos / retry storm: 300–900 seconds
+   Recovery: 900–1,500 seconds
+   ```
+
+7. Runs Mann-Whitney U tests to compare HPA and PID over ten runs per controller.
+8. Calculates Cliff's delta as a non-parametric effect size.
+9. Calculates request-level recovery proxies by measuring the time after the recovery phase begins until failures/s remain below a selected threshold for a sustained 60-second interval.
+10. Regenerates CSV tables and PNG figures used as reproducibility evidence for the dissertation.
+
+### 11.2 Generated Tables
+
+The script generates:
+
+| Output file | Purpose |
+|---|---|
+| `analysis/output/tables/aggregate_metrics_per_run.csv` | Per-run aggregate metrics for HPA and PID |
+| `analysis/output/tables/aggregate_comparison_summary.csv` | Mean HPA vs PID comparison and relative changes |
+| `analysis/output/tables/mann_whitney_cliffs_delta.csv` | Mann-Whitney U test results and Cliff's delta effect sizes |
+| `analysis/output/tables/history_metrics_all_runs.csv` | Combined time-series metrics from all final runs |
+| `analysis/output/tables/phase_based_summary.csv` | Baseline, chaos, and recovery phase summaries |
+| `analysis/output/tables/recovery_proxy_per_run.csv` | Per-run request-level recovery proxy values |
+| `analysis/output/tables/recovery_proxy_summary.csv` | Mean recovery proxy comparison between HPA and PID |
+
+### 11.3 Generated Figures
+
+The script generates:
+
+| Output file | Purpose |
+|---|---|
+| `analysis/output/figures/figure_4_failure_rate_runs.png` | Failure rate across ten experimental runs |
+| `analysis/output/figures/figure_5_average_latency_runs.png` | Average latency across ten experimental runs |
+| `analysis/output/figures/figure_6_throughput_runs.png` | Raw throughput across ten experimental runs |
+| `analysis/output/figures/figure_7_mean_failure_intensity_over_time.png` | Mean failure intensity over time |
+| `analysis/output/figures/figure_8_mean_p95_latency_over_time.png` | Mean p95 latency over time |
+| `analysis/output/figures/effective_successful_rps.png` | Effective successful requests/s comparison |
+| `analysis/output/figures/recovery_proxy_threshold_1.png` | Recovery proxy for failures/s ≤ 1 for 60s |
+| `analysis/output/figures/recovery_proxy_threshold_5.png` | Recovery proxy for failures/s ≤ 5 for 60s |
+| `analysis/output/figures/recovery_proxy_threshold_10.png` | Recovery proxy for failures/s ≤ 10 for 60s |
+
+### 11.4 Reproduced Key Outputs
+
+The analysis script reproduces the dissertation's key quantitative findings:
+
+```text
+Failure rate:                    HPA 73.39%     → PID 43.98%
+Failures/s:                      HPA 99.60      → PID 34.79
+Average response time:           HPA 1761.96 ms → PID 2998.08 ms
+Raw requests/s:                  HPA 134.54     → PID 78.56
+Effective successful requests/s: HPA 35.80      → PID 44.01
+```
+
+This provides the evidence trail:
+
+```text
+CSV results → Python analysis script → generated tables → generated figures → dissertation findings
 ```
 
 ---
 
 ## 12. Known Limitations
 
-- Testbed uses single-node Minikube rather than a multi-node production cluster
-- Replica-count telemetry was not continuously exported for both controller groups — oscillation index and classical settling time cannot be directly computed
-- Request-level recovery proxy is used in place of replica-level settling time
-- Workload is synthetic and intentionally aggressive (no backoff, no jitter)
-- PID gains (`Kp=0.5`, `Ki=0.05`, `Kd=0.1`) were tuned heuristically, not via Ziegler-Nichols or formal system identification
-- Single process variable (rejection rate) — a production controller would likely incorporate multiple signals
-- Results are specific to CPU-bound bcrypt workloads; generalisation to memory-bound or I/O-bound workloads requires further study
+- Testbed uses single-node Minikube rather than a multi-node production cluster.
+- Replica-count telemetry was not continuously exported for both controller groups — oscillation index and classical settling time cannot be directly computed.
+- Request-level recovery proxy is used in place of replica-level settling time.
+- Workload is synthetic and intentionally aggressive, with no backoff and no jitter.
+- PID gains (`Kp=0.5`, `Ki=0.05`, `Kd=0.1`) were tuned heuristically, not via Ziegler-Nichols or formal system identification.
+- Single process variable: rejection rate. A production controller would likely incorporate multiple signals.
+- Results are specific to CPU-bound bcrypt workloads. Generalisation to memory-bound or I/O-bound workloads requires further study.
 
 ---
 
@@ -337,8 +430,12 @@ For full reproducibility, the key artefacts are:
 | Locust workload script | `locustfiles/` |
 | Final HPA results | `results/baseline_v3/` |
 | Final PID results | `results/pid/` |
-| Analysis scripts | `analysis/` |
-| Generated charts | `analysis/charts/` |
+| Analysis script | `analysis/statistical_test.py` |
+| Analysis dependencies | `analysis/requirements.txt` |
+| Generated statistical tables | `analysis/output/tables/` |
+| Generated charts | `analysis/output/figures/` |
+
+The `analysis/statistical_test.py` script is included to support reproducibility of the dissertation findings. It regenerates the aggregate comparison, phase-based summaries, Mann-Whitney U tests, Cliff's delta values, request-level recovery proxy tables, and PNG figures directly from the final Locust CSV exports.
 
 > Local absolute paths in shell scripts may need adjusting before running on another machine.
 
@@ -349,9 +446,10 @@ For full reproducibility, the key artefacts are:
 This repository supports an MSc Software Engineering dissertation at the **University of Greater Manchester** (2026). It is a research artefact demonstrating a practical implementation of feedback control in a Kubernetes environment, not a production-ready autoscaling solution.
 
 The project contributes:
-1. An empirical benchmark of PID-based autoscaling in a live Kubernetes cluster under retry-storm conditions — addressing the simulation gap identified in the literature
-2. A deployable open-source reference implementation of a PID sidecar autoscaler
-3. A replicable experimental protocol (10 × 25-minute three-phase chaos runs, Mann-Whitney U + Cliff's delta evaluation) applicable to future autoscaling research
+
+1. An empirical benchmark of PID-based autoscaling in a live Kubernetes cluster under retry-storm conditions — addressing the simulation gap identified in the literature.
+2. A deployable open-source reference implementation of a PID sidecar autoscaler.
+3. A replicable experimental protocol: 10 × 25-minute three-phase chaos runs, Mann-Whitney U testing, Cliff's delta evaluation, and reproducible Python analysis.
 
 ---
 
@@ -366,7 +464,7 @@ Supervisor: Mr. Andrew Stephenson
 
 ## 16. Repository
 
-```
+```text
 https://github.com/asfand971/pid-hpa-autoscaler
 ```
 
@@ -375,5 +473,3 @@ https://github.com/asfand971/pid-hpa-autoscaler
 ## 17. Licence
 
 No licence has been specified. This repository is provided as an academic research artefact. If you wish to build on this work, please contact the author.
-
----

@@ -1,0 +1,4 @@
+criterion,HPA,PID,difference_pid_minus_hpa_seconds
+failures/s <= 1 for 60s,29.0,24.1,-4.899999999999999
+failures/s <= 10 for 60s,22.5,18.4,-4.100000000000001
+failures/s <= 5 for 60s,24.2,20.0,-4.199999999999999

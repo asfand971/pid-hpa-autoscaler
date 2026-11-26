@@ -1,4 +1,4 @@
-# PID-HPA Autoscaler — MSc Dissertation 2026
+# PID-HPA Autoscaler 
 
 **Empirical Evaluation of Control-Theoretic Autoscaling (PID) for Stability in Microservice Architectures Under Chaotic Conditions**
 
@@ -456,10 +456,7 @@ The project contributes:
 ## 15. Author
 
 **Asfand Khan**  
-MSc Software Engineering  
-University of Greater Manchester  
-Supervisor: Mr. Andrew Stephenson
-
+Senior Full Stack Engineer
 ---
 
 ## 16. Repository
